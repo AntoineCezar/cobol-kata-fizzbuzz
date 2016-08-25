@@ -1,0 +1,26 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. fizzbuzz IS INITIAL.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+           01 INPUT-MOD2 PIC 9.
+           01 INPUT-MOD3 PIC 9.
+
+       LINKAGE SECTION.
+           COPY fizzbuzz-vars.
+
+       PROCEDURE DIVISION USING FIZZBUZZ-INPUT,
+                                FIZZBUZZ-OUTPUT.
+       MAIN.
+           MOVE FUNCTION MOD(FIZZBUZZ-INPUT, 2) TO INPUT-MOD2
+           MOVE FUNCTION MOD(FIZZBUZZ-INPUT, 3) TO INPUT-MOD3
+           IF INPUT-MOD2 + INPUT-MOD3 EQUAL 0 THEN
+               MOVE 'FizzBuzz' TO FIZZBUZZ-OUTPUT
+           ELSE IF INPUT-MOD2 EQUAL 0 THEN
+               MOVE 'Fizz' TO FIZZBUZZ-OUTPUT
+           ELSE IF INPUT-MOD3 EQUAL 0 THEN
+               MOVE 'Buzz' TO FIZZBUZZ-OUTPUT
+           ELSE
+               MOVE FIZZBUZZ-INPUT TO FIZZBUZZ-OUTPUT
+           END-IF
+           .
