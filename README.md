@@ -5,6 +5,16 @@ I used the FizzBuz kata as a mean to teach myself COBOL.
 Started as a [gist](https://gist.github.com/AntoineCezar/946a09c2917d27592717d17e8497a834)
 it's now maintained here.
 
+## Requirements
+
+* gnu-cobol
+* make
+
+## Quick Start
+
+* To run the program: `make run`
+* To run the tests: `make run-tests`
+
 ## TODO
 
 * [x] Make it works
