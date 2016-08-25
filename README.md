@@ -13,7 +13,7 @@ it's now maintained here.
 ## Quick Start
 
 * To run the program: `make run`
-* To run the tests: `make run-tests`
+* To run the tests: `make test`
 
 ## TODO
 

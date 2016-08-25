@@ -3,11 +3,11 @@ COBC_OPTIONS=-O -Warchaic -Wobsolete
 run: main
 	./main
 
-run-tests: test
-	./test
+test: test-fizzbuzz
+	./test-fizzbuzz
 
-test: fizzbuzz.so test.cob
-	cobc $(COBC_OPTIONS) -x test.cob
+test-fizzbuzz: fizzbuzz.so test-fizzbuzz.cob
+	cobc $(COBC_OPTIONS) -x test-fizzbuzz.cob
 
 main: fizzbuzz.so main.cob
 	cobc $(COBC_OPTIONS) -x main.cob
