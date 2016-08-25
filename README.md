@@ -7,8 +7,8 @@ it's now maintained here.
 
 ## TODO
 
-[x] Make it works
-[x] Make it tested
-[x] Make it copies (COBOL's include directive)
-[ ] Make it with assertion subroutines
-[ ] Remake it the TDD way
+* [x] Make it works
+* [x] Make it tested
+* [x] Make it copies (COBOL's include directive)
+* [ ] Make it with assertion subroutines
+* [ ] Remake it the TDD way
