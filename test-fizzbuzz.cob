@@ -3,6 +3,7 @@
 
        DATA DIVISION.
        WORKING-STORAGE SECTION.
+           01 ACTUAL PIC X(8).
            01 EXPECTED PIC X(8).
            COPY fizzbuzz-vars.
 
@@ -13,6 +14,8 @@
            PERFORM MULT-OF-2-AND-3-GIVES-FIZZBUZZ
            STOP RUN
            .
+
+       COPY assert.
 
        TEST-FIZZBUZZ-OUTPUT.
            IF FIZZBUZZ-OUTPUT NOT EQUAL EXPECTED THEN
@@ -28,7 +31,8 @@
                                  FIZZBUZZ-OUTPUT
 
            MOVE 'Fizz' TO EXPECTED
-           PERFORM TEST-FIZZBUZZ-OUTPUT
+           MOVE FIZZBUZZ-OUTPUT TO ACTUAL
+           PERFORM ASSERT-EQUAL
            .
 
        MULT-OF-3-GIVES-BUZZ.
@@ -39,7 +43,8 @@
                                  FIZZBUZZ-OUTPUT
 
            MOVE 'Buzz' TO EXPECTED
-           PERFORM TEST-FIZZBUZZ-OUTPUT
+           MOVE FIZZBUZZ-OUTPUT TO ACTUAL
+           PERFORM ASSERT-EQUAL
            .
 
        MULT-OF-2-AND-3-GIVES-FIZZBUZZ.
@@ -50,5 +55,6 @@
                                  FIZZBUZZ-OUTPUT
 
            MOVE 'FizzBuzz' TO EXPECTED
-           PERFORM TEST-FIZZBUZZ-OUTPUT
+           MOVE FIZZBUZZ-OUTPUT TO ACTUAL
+           PERFORM ASSERT-EQUAL
            .
