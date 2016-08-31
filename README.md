@@ -20,5 +20,5 @@ it's now maintained here.
 * [x] Make it works
 * [x] Make it tested
 * [x] Make it copies (COBOL's include directive)
-* [ ] Make it with assertion subroutines
+* [X] Make it with perform assertion (won't work with subroutines)
 * [ ] Remake it the TDD way
